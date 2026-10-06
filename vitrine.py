@@ -1,5 +1,5 @@
+from rich import print
 from rich.panel import Panel
-from rich.console import Console
 
 # Etapa 2: os dados da loja em tipos e coleções (Aula 3)
 
@@ -33,5 +33,4 @@ conteudo += f'\nTotal do carrinho: [bold blue]R$ {round(total, 2)}[/bold blue]'
 
 panel = Panel(conteudo, title="[blue]Resumo da loja[/blue]", width=34)
 
-console = Console()
-console.print(panel)
+print(panel)
