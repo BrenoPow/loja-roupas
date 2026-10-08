@@ -1,6 +1,6 @@
 # Loja de Roupas
 
-Projeto construído ao vivo na aula de Coding (Faculdade Senac Pernambuco, 2026.2).
+Projeto construído passo a passo na aula de Coding (Faculdade Senac Pernambuco, 2026.2).
 
 ## Como rodar
 
