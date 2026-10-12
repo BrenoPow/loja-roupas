@@ -9,6 +9,7 @@ python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 pytest -v
+fastapi dev api.py              # abre a API em http://127.0.0.1:8000/docs
 ```
 
 ![testes](https://github.com/SEU-USUARIO/loja-roupas/actions/workflows/testes.yml/badge.svg)
@@ -23,3 +24,5 @@ pytest -v
 | `loja/carrinho.py` | o Carrinho, que tem produtos e uma promoção | 6 e 7 |
 | `loja/promocao.py` | o contrato Promocao e três promoções | 7 e 8 |
 | `.github/workflows/testes.yml` | o GitHub roda os testes a cada push | 8 |
+| `api.py` | a loja como API: vitrine, filtro, carrinho e total | 9 |
+| `tests/test_api.py` | testes da API com TestClient | 9 |
