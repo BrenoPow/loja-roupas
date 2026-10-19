@@ -10,6 +10,7 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 pytest -v
 fastapi dev api.py              # abre a API em http://127.0.0.1:8000/docs
+                                 # os produtos ficam gravados em loja.db
 ```
 
 ![testes](https://github.com/SEU-USUARIO/loja-roupas/actions/workflows/testes.yml/badge.svg)
@@ -26,3 +27,8 @@ fastapi dev api.py              # abre a API em http://127.0.0.1:8000/docs
 | `.github/workflows/testes.yml` | o GitHub roda os testes a cada push | 8 |
 | `api.py` | a loja como API: vitrine, filtro, carrinho e total | 9 |
 | `tests/test_api.py` | testes da API com TestClient | 9 |
+| `exemplos/sqlite_puro.py` | SQL à mão com o sqlite3 do Python | 10 |
+| `loja/banco.py` | a tabela produto e a conexão com o SQLite | 10 |
+| `loja/repositorio.py` | o repositório: única parte que conversa com o banco | 10 |
+| `loja/servico.py` | as regras do catálogo e as exceções do domínio | 10 |
+| `tests/test_repositorio.py`, `tests/test_servico.py` | testes com banco em memória | 10 |
