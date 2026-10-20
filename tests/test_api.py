@@ -79,6 +79,12 @@ def test_quantidade_zero_da_422():
     assert resposta.status_code == 422
 
 
+def test_adicionar_item_da_201():
+    resposta = cliente.post("/carrinho/itens", json={"produto_id": 1, "quantidade": 3})
+    assert resposta.status_code == 201
+    assert resposta.json()["pecas_no_carrinho"] == 3
+
+
 def test_total_com_promocao_sem_frete():
     cliente.post("/carrinho/itens", json={"produto_id": 1, "quantidade": 3})
     cliente.post("/carrinho/itens", json={"produto_id": 2, "quantidade": 1})
